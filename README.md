@@ -16,3 +16,7 @@ by Abdullah Aleem, Abuzar Ahmed and Saad Chugtai.
 - [Deep Learning Model](#deep-learning-model)
 - [Experimental Results](#experimental-results)
 - [Conclusion and Limitations](#conclusion)
+
+
+## Problem Statement
+Present metal detection systems for security purposes work on the principle of electromagnetic induction some are X-Ray based. They have a small coverage area and require dedicated expensive hardware. Also, ionizing radiations of X-Ray are harmful for the skin. Hence, there is a great need to having unobtrusive metal detectors which cover a larger area
