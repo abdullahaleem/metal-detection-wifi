@@ -1,4 +1,4 @@
 # metal-detection-using-wifi
+by Abdullah Aleem, Abuzar Ahmed and Saad Chugtai.
 
-Detailed presentation:
 https://www.emaze.com/@AOLTTOZRR/sproj-2
