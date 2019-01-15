@@ -1,6 +1,6 @@
 # metal-detection-using-wifi
 
-![Intro](https://pasteboard.co/HWwE1cM5.jpg)
+![Intro](https://cdn.pbrd.co/images/HWwE1cM5.jpg)
 by Abdullah Aleem, Abuzar Ahmed and Saad Chugtai.
 
 https://www.emaze.com/@AOLTTOZRR/sproj-2
