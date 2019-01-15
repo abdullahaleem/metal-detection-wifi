@@ -51,7 +51,7 @@ Duration of each experiment was 10 seconds involving a person approaching the tr
 
 Contrary to the static cases, target motion along a predefined trajectory also induces motion artifacts in received CSI. As a result, the previously differnce in CSI no longer remains.
 
-![movingtargetCSI](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_360,h_240/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2Ff2a1ddbd0b954c29b647067e2b7d223a.jpg)
+![movingtargetCSI](https://cdn.pbrd.co/images/HWx61Qt.png)
 
 ## Data Preprocessing
 
@@ -72,7 +72,7 @@ Instead of manually identifying a better set of features, we resort to utilizing
 
 ![model](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_720,h_200/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2Fb2d42aefe6b8261b77729da892905895.jpg)
 
-![parameters](https://userscontent2.emaze.com/images/694313c7-4a1b-4238-afea-b3d7418ecc2d/1578138b535159174b00a2f976689f4f.JPG)
+![parameters](https://cdn.pbrd.co/images/HWx6SJC.png)
 
 
 ## Experimental Results
@@ -89,22 +89,17 @@ Instead of manually identifying a better set of features, we resort to utilizing
 
 **Conclusion**
 
-We have explored the use of commodity WiFi radios for developing a non-obtrusive system for concealed metallic object detection.
-
-By collecting data in an experimental setup, we have demonstrated the effectiveness of the framework with a deep CNN classifier achieving an average accuracy of **86.44%**. 
-
-The robustness of the proposed system has been increased by deploying a number of receivers which simultaneously collect the reflected energy from the metallic object. 
-
-Our system has the potential to significantly increase the coverage area without requiring subjects to pass through a narrowly localized path.
+- We have explored the use of commodity WiFi radios for developing a non-obtrusive system for concealed metallic object detection.
+- By collecting data in an experimental setup, we have demonstrated the effectiveness of the framework with a deep CNN classifier achieving an average accuracy of **86.44%**. 
+- The robustness of the proposed system has been increased by deploying a number of receivers which simultaneously collect the reflected energy from the metallic object. 
+- Our system has the potential to significantly increase the coverage area without requiring subjects to pass through a narrowly localized path.
 
 
 **Limitations**
 
-All the experiments have been conducted with a single metal sheet. Also, during each experiment, there was only one target human either static or in motion. We intend to expand this to work for multiple persons.
-
-The system still needs to be tested and validated against variations and uncertainties such as walking speed and angle before a working deployable prototype is ready. 
-
-Nevertheless, the preliminary results reported above, point to the promise of using Wi-Fi radios for non-obtrusive metal detection systems.
+- All the experiments have been conducted with a single metal sheet. Also, during each experiment, there was only one target human either static or in motion. We intend to expand this to work for multiple persons.
+- The system still needs to be tested and validated against variations and uncertainties such as walking speed and angle before a working deployable prototype is ready. 
+- Nevertheless, the preliminary results reported above, point to the promise of using Wi-Fi radios for non-obtrusive metal detection systems.
 
 
 
