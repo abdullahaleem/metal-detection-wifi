@@ -10,12 +10,12 @@ by Abdullah Aleem, Abuzar Ahmed and Saad Chugtai.
 
 - [Introduction](#introduction)
 - [Related Work](#related-work)
-- [Hardware Design and Experimental Setup](#hardware-design)
+- [Hardware Design and Experimental Setup](#hardware-design-and-experimental-setup)
 - [Data Collection](#data-collection)
 - [Data Preprocessing](#data-preprocessing)
-- [Deep Learning Model](#deep-learning-model)
+- [Model Used](#model-used)
 - [Experimental Results](#experimental-results)
-- [Conclusion and Limitations](#conclusion)
+- [Conclusion and Limitations](#conclusion-and-limitations)
 
 
 ## Introduction
@@ -37,19 +37,18 @@ Transmitter is configured to Wi-Fi packets with 1 ms inter-packet delay.It is co
 
 ## Data Collection
 
-Experiments were conducted in a basement (42 x 39 ft) and the receiver nodes are put 11.5 ft from the transmitter node. 
+We conducted 459 experiments with minimal differences in experimental setup for four people, having different heights and body masses, with and without metal sheet. The walking pace and angles for all subjects were kept almost the same with natural variations only. Experiments were conducted in a basement (42 x 39 ft) and the receiver nodes are put 11.5 ft from the transmitter node.
 Duration of each experiment was 10 seconds involving a person approaching the transmitter node starting from a fixed position and stopping at another fixed position, 17 ft away.
-In the first case, subjects approach the transmitter without holding any metallic sheet. In the second case, they carry a metallic aluminum sheet.
-Data is collected over multiple days and four people with different heights and body masses performed the experiment.
 
 
 **CSI Extraction** is done using a tool built by Asif Hanif on the Intel Wi-Fi Wireless Link 5300 802.11n MIMO radios, using a custom modified firmware and open source Linux wireless drivers. It provides channel state information for 30 sub-carrier groups. Each channel matrix entry is a complex number, with signed 8-bit resolution each for the real and imaginary parts. It specifies the gain and phase of the signal path between a single transmit-receive antenna pair.
 
-** CSI with Static Target**
+**CSI with Static Target**
 
 ![statictargetCSI](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_440,h_280/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2F72fd1edee58e624798969bd18a8a63c9.jpg)
 
-** CSI with moving Target**
+**CSI with moving Target**
+
 Contrary to the static cases, target motion along a predefined trajectory also induces motion artifacts in received CSI. As a result, the previously differnce in CSI no longer remains.
 
 ![movingtargetCSI](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_360,h_240/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2Ff2a1ddbd0b954c29b647067e2b7d223a.jpg)
@@ -67,4 +66,47 @@ After concatenating CSI data from all antennae, we obtain a CSI matrix of size 2
 ![preprocessing](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_400,h_320/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2Fdcec83954c9e0b035fd2bd323684f6f8.JPG)
 
 
+## Model Used
+
+Instead of manually identifying a better set of features, we resort to utilizing a convolutional neural network for classification purposes.
+
+![model](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_720,h_200/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2Fb2d42aefe6b8261b77729da892905895.jpg)
+
+![parameters](https://userscontent2.emaze.com/images/694313c7-4a1b-4238-afea-b3d7418ecc2d/1578138b535159174b00a2f976689f4f.JPG)
+
+
+## Experimental Results
+
+
+![kfoldresults](https://userscontent2.emaze.com/images/694313c7-4a1b-4238-afea-b3d7418ecc2d/e681554f44d957a018d150acc07c0652.png)
+
+![confusionmatrix](https://userscontent2.emaze.com/images/694313c7-4a1b-4238-afea-b3d7418ecc2d/f5b5ac30fba2cbca4e02039a9d18b1b1.png)
+
+![accuracyandloss](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_400,h_280/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2F61a07ba1bfb01af78847863c1481b3b8.jpg)
+
+
+## Conclusion and Limitations
+
+**Conclusion**
+
+We have explored the use of commodity WiFi radios for developing a non-obtrusive system for concealed metallic object detection.
+
+By collecting data in an experimental setup, we have demonstrated the effectiveness of the framework with a deep CNN classifier achieving an average accuracy of **86.44%**. 
+
+The robustness of the proposed system has been increased by deploying a number of receivers which simultaneously collect the reflected energy from the metallic object. 
+
+Our system has the potential to significantly increase the coverage area without requiring subjects to pass through a narrowly localized path.
+
+
+**Limitations**
+
+All the experiments have been conducted with a single metal sheet. Also, during each experiment, there was only one target human either static or in motion. We intend to expand this to work for multiple persons.
+
+The system still needs to be tested and validated against variations and uncertainties such as walking speed and angle before a working deployable prototype is ready. 
+
+Nevertheless, the preliminary results reported above, point to the promise of using Wi-Fi radios for non-obtrusive metal detection systems.
+
+
+
+## Our work has resulted in the submission of a research paper to 2018 IEEE Global Communications Conference.
 
