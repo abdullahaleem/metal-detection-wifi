@@ -49,26 +49,23 @@ Duration of each experiment was 10 seconds involving a person approaching the tr
 
 **CSI with moving Target**
 
-Contrary to the static cases, target motion along a predefined trajectory also induces motion artifacts in received CSI. As a result, the previously differnce in CSI no longer remains.
-
 ![movingtargetCSI](https://cdn.pbrd.co/images/HWx61Qt.png)
+
+Contrary to the static cases, target motion along a predefined trajectory also induces motion artifacts in received CSI. As a result, the previously differnce in CSI no longer remains.
 
 ## Data Preprocessing
 
-The CSI stream corresponding to each of the 6 antennas is truncated to accommodate for target motion by removing initial and final transients, choosing the middle 5000 recordings. 
-
-A Gaussian moving average filter removes high frequency noise.
-
-A non-overlapping window averages adjacent CSI recordings reducing 5000 recordings down to  250 for each CSI stream.
-
-After concatenating CSI data from all antennae, we obtain a CSI matrix of size 250x180 which serves as an input for feature extraction.
+- The CSI stream corresponding to each of the 6 antennas is truncated to accommodate for target motion by removing initial and final transients, choosing the middle 5000 recordings. 
+- A Gaussian moving average filter removes high frequency noise.
+- A non-overlapping window averages adjacent CSI recordings reducing 5000 recordings down to  250 for each CSI stream.
+- After concatenating CSI data from all antennae, we obtain a CSI matrix of size 250x180 which serves as an input for feature extraction.
 
 ![preprocessing](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_400,h_320/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2Fdcec83954c9e0b035fd2bd323684f6f8.JPG)
 
 
 ## Model Used
 
-Instead of manually identifying a better set of features, we resort to utilizing a convolutional neural network for classification purposes.
+Instead of manually identifying a better set of features, we resort to utilizing a convolutional neural network (given below) for classification purposes.
 
 ![model](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_720,h_200/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2Fb2d42aefe6b8261b77729da892905895.jpg)
 
@@ -77,12 +74,14 @@ Instead of manually identifying a better set of features, we resort to utilizing
 
 ## Experimental Results
 
+**Confusion Matrix and Comparison**
+![confusionmatrix](https://cdn.pbrd.co/images/HWxdkSx.png)
 
-![kfoldresults](https://userscontent2.emaze.com/images/694313c7-4a1b-4238-afea-b3d7418ecc2d/e681554f44d957a018d150acc07c0652.png)
+**K-fold Cross Validation**
+![kfoldresults](https://cdn.pbrd.co/images/HWxe1jK.png)
 
-![confusionmatrix](https://userscontent2.emaze.com/images/694313c7-4a1b-4238-afea-b3d7418ecc2d/f5b5ac30fba2cbca4e02039a9d18b1b1.png)
-
-![accuracyandloss](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_400,h_280/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2F61a07ba1bfb01af78847863c1481b3b8.jpg)
+**Model Accuracy and Loss**
+![accuracyandloss](https://cdn.pbrd.co/images/HWxeC6W.png)
 
 
 ## Conclusion and Limitations
