@@ -37,10 +37,10 @@ Transmitter is configured to Wi-Fi packets with 1 ms inter-packet delay.It is co
 
 ## Data Collection
 
+![datacollectingvideo](https://cdn.pbrd.co/images/HWwE1cM5.jpg)
 Experiments were conducted in a basement (42 x 39 ft) and the receiver nodes are put 11.5 ft from the transmitter node. 
 Duration of each experiment was 10 seconds involving a person approaching the transmitter node starting from a fixed position and stopping at another fixed position, 17 ft away.
 In the first case, subjects approach the transmitter without holding any metallic sheet. In the second case, they carry a metallic aluminum sheet.
 Data is collected over multiple days and four people with different heights and body masses performed the experiment.
 
-![datacollectingvideo](https://cdn.pbrd.co/images/HWwE1cM5.jpg)
 
