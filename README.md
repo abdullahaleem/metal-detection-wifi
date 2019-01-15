@@ -1,4 +1,4 @@
-# metal-detection-using-wifi
+# Metal Detection with Wi-Fi using Deep learning
 
 ![Intro](https://cdn.pbrd.co/images/HWwQCzh.png)
 
