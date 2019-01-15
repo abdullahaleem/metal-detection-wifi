@@ -11,7 +11,8 @@ by Abdullah Aleem, Abuzar Ahmed and Saad Chugtai.
 - [Introduction](#introduction)
 - [Related Work](#related-work)
 - [Hardware Design and Experimental Setup](#hardware-design)
-- [Data Collection and Preprocessing](#data-collection)
+- [Data Collection](#data-collection)
+- [Data Preprocessing](#data-preprocessing)
 - [Deep Learning Model](#deep-learning-model)
 - [Experimental Results](#experimental-results)
 - [Conclusion and Limitations](#conclusion)
@@ -29,9 +30,15 @@ A similar approach to Wi-Fi based metal detection has been proposed in Wi-Metal.
 
 ![design](https://cdn.pbrd.co/images/HWwIlJf.png)
 
-Transmitter is configured to Wi-Fi packets with 1 ms inter-packet delay. Packets are received at receiving nodes after reflecting off the moving subject. At the receiver nodes, CSI is estimated and extracted for preprocessing.
+Transmitter is configured to Wi-Fi packets with 1 ms inter-packet delay.It is connected to a pyramidal horn antenna having 9 dBi gain and each receiver node is connected to three omni-directional antennas. Packets are received at receiving nodes after reflecting off the moving subject. At the receiver nodes, CSI is estimated and extracted for preprocessing. 
 
 ![setup](https://userscontent2.emaze.com/images/694313c7-4a1b-4238-afea-b3d7418ecc2d/316ece7fbf0d0e35baad1f07800c0903.jpg)
 
 
+## Data Collection
+
+Experiments were conducted in a basement (42 x 39 ft) and the receiver nodes are put 11.5 ft from the transmitter node. 
+Duration of each experiment was 10 seconds involving a person approaching the transmitter node starting from a fixed position and stopping at another fixed position, 17 ft away.
+In the first case, subjects approach the transmitter without holding any metallic sheet. In the second case, they carry a metallic aluminum sheet. 
+Data is collected over multiple days and four people with different heights and body masses performed the experiment.
 
