@@ -42,6 +42,8 @@ Duration of each experiment was 10 seconds involving a person approaching the tr
 In the first case, subjects approach the transmitter without holding any metallic sheet. In the second case, they carry a metallic aluminum sheet.
 Data is collected over multiple days and four people with different heights and body masses performed the experiment.
 
-![datacollectingvideo](https://userscontent2.emaze.com/media/694313c7-4a1b-4238-afea-b3d7418ecc2d/0915270fe1e9f3bc72765e47190a30a1.MP4)
+[![datacollectingvideo]()](https://userscontent2.emaze.com/media/694313c7-4a1b-4238-afea-b3d7418ecc2d/0915270fe1e9f3bc72765e47190a30a1.MP4)
+
+[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=VID)
 
 
