@@ -1,13 +1,13 @@
 # metal-detection-using-wifi
 
-![Intro](https://drive.google.com/open?id=1b9BZJUHvZpQ9-nomGVgTuuFAq_nDkEC1)
+![Intro](https://pasteboard.co/HWwE1cM5.jpg)
 by Abdullah Aleem, Abuzar Ahmed and Saad Chugtai.
 
 https://www.emaze.com/@AOLTTOZRR/sproj-2
 
 ---
 
-## Content Review
+## Table of Contents
 
 - [Problem Statement](#problem-statement)
 - [Introduction](#introduction)
