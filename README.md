@@ -37,7 +37,7 @@ Transmitter is configured to Wi-Fi packets with 1 ms inter-packet delay.It is co
 
 ## Data Collection
 
-We conducted 459 experiments with minimal differences in experimental setup for four people, having different heights and body masses, with and without metal sheet. The walking pace and angles for all subjects were kept almost the same with natural variations only. Experiments were conducted in a basement (42 x 39 ft) and the receiver nodes are put 11.5 ft from the transmitter node.
+We conducted 460 experiments with minimal differences in experimental setup for four people, having different heights and body masses, with and without metal sheet. The walking pace and angles for all subjects were kept almost the same with natural variations only. Experiments were conducted in a basement (42 x 39 ft) and the receiver nodes are put 11.5 ft from the transmitter node.
 Duration of each experiment was 10 seconds involving a person approaching the transmitter node starting from a fixed position and stopping at another fixed position, 17 ft away.
 
 
