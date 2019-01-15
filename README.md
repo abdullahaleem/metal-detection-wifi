@@ -25,3 +25,13 @@ The main idea is to detect metallic object on human by recording and processing 
 ## Related Work
 A similar approach to Wi-Fi based metal detection has been proposed in Wi-Metal. However, the system in Wi-Metal requires that the target of interest is not moving. Thus, the robustness of the system while the subject is moving was not tested. As opposed to Wi-Metal, our proposed system has extended work where the targets are moving.
 
+## Hardware Design and Experimental Setup
+
+![design](https://cdn.pbrd.co/images/HWwIlJf.png)
+
+Transmitter is configured to Wi-Fi packets with 1 ms inter-packet delay. Packets are received at receiving nodes after reflecting off the moving subject. At the receiver nodes, CSI is estimated and extracted for preprocessing.
+
+![setup](https://userscontent2.emaze.com/images/694313c7-4a1b-4238-afea-b3d7418ecc2d/316ece7fbf0d0e35baad1f07800c0903.jpg)
+
+
+
