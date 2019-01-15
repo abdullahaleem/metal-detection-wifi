@@ -24,12 +24,10 @@ from sklearn.utils import shuffle
 from sklearn.model_selection import KFold 
 
 
-# random number generator
 os.environ['PYTHONHASHSEED'] = '0'
 np.random.seed(123)
 rn.seed(123)
 
-# pc cores divison
 session_conf = tf.ConfigProto(intra_op_parallelism_threads=0, inter_op_parallelism_threads=0)
 #session_conf = tf.ConfigProto()
 tf.set_random_seed(123)
