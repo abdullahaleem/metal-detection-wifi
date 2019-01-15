@@ -42,12 +42,29 @@ Duration of each experiment was 10 seconds involving a person approaching the tr
 In the first case, subjects approach the transmitter without holding any metallic sheet. In the second case, they carry a metallic aluminum sheet.
 Data is collected over multiple days and four people with different heights and body masses performed the experiment.
 
-## Data Preprocessing
- 
-**CSI Extraction**
-CSI is extracted from CSI tool built on the Intel Wi-Fi Wireless Link 5300 802.11n MIMO radios, using a custom modified firmware and open source Linux wireless drivers. It provides channel state information for 30 sub-carrier groups.Each channel matrix entry is a complex number, with signed 8-bit resolution each for the real and imaginary parts. It specifies the gain and phase of the signal path between a single transmit-receive antenna pair.
 
-an example of CSI with static target.
+**CSI Extraction** is done using a tool built by Asif Hanif on the Intel Wi-Fi Wireless Link 5300 802.11n MIMO radios, using a custom modified firmware and open source Linux wireless drivers. It provides channel state information for 30 sub-carrier groups. Each channel matrix entry is a complex number, with signed 8-bit resolution each for the real and imaginary parts. It specifies the gain and phase of the signal path between a single transmit-receive antenna pair.
+
+** CSI with Static Target**
 
 ![statictargetCSI](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_440,h_280/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2F72fd1edee58e624798969bd18a8a63c9.jpg)
+
+** CSI with moving Target**
+Contrary to the static cases, target motion along a predefined trajectory also induces motion artifacts in received CSI. As a result, the previously differnce in CSI no longer remains.
+
+![movingtargetCSI](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_360,h_240/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2Ff2a1ddbd0b954c29b647067e2b7d223a.jpg)
+
+## Data Preprocessing
+
+The CSI stream corresponding to each of the 6 antennas is truncated to accommodate for target motion by removing initial and final transients, choosing the middle 5000 recordings. 
+
+A Gaussian moving average filter removes high frequency noise.
+
+A non-overlapping window averages adjacent CSI recordings reducing 5000 recordings down to  250 for each CSI stream.
+
+After concatenating CSI data from all antennae, we obtain a CSI matrix of size 250x180 which serves as an input for feature extraction.
+
+![preprocessing](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_400,h_320/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2Fdcec83954c9e0b035fd2bd323684f6f8.JPG)
+
+
 
