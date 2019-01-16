@@ -104,5 +104,5 @@ Instead of manually identifying a better set of features, we resort to utilizing
 
 
 
-## Our work has resulted in the submission of a research paper to 2018 IEEE Global Communications Conference.
+## Our work has resulted in submission and acceptance of a research paper to 2018 IEEE Global Communications Conference.
 
