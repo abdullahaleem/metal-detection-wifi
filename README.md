@@ -21,7 +21,7 @@ by Abdullah Aleem, Abuzar Ahmed and Saad Chugtai.
 ## Introduction
 Present metal detection systems for security purposes work on the principle of electromagnetic induction. They have a small coverage area and require dedicated expensive hardware. Also, ionizing radiations of X-Ray are harmful for the skin. Hence, there is a need for a non-obtrusive metal detector which large coverage area.
 
-The basic idea behind the detection of metallic objects using Wi-Fi is that the presence of metal produces changes in the received signal. These changes can then be detected as well as differentiated from non-metal cases. In order to detect the changes in received signal, fine-grained CSI information can be utilized. A custom hardware was designed to collect CSI informatiion which after processing was classifed used Deep learning.
+The basic idea behind the detection of metallic objects using Wi-Fi is that the presence of metal produces changes in the received signal. These changes can then be detected as well as differentiated from non-metal cases. In order to detect the changes in received signal, fine-grained CSI information can be utilized. A custom hardware was designed to collect CSI information which was then processed and classifed used Deep learning.
 
 ## Related Work
 A similar approach to Wi-Fi based metal detection has been proposed in Wi-Metal. However, the system in Wi-Metal requires that the target of interest is not moving. Thus, the robustness of the system while the subject is moving was not tested. As opposed to Wi-Metal, our proposed system has extended work where the targets are moving.
