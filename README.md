@@ -44,11 +44,11 @@ Transmitter is configured to send Wi-Fi packets with 1 ms inter-packet delay.It 
 
 **CSI Extraction** was done on the Intel Wi-Fi Wireless Link 5300 802.11n MIMO radios, using a custom modified firmware and open source Linux wireless drivers. It provides channel state information for 30 sub-carrier groups. Each channel matrix entry is a complex number, with signed 8-bit resolution each for the real and imaginary parts. It specifies the gain and phase of the signal path between a single transmit-receive antenna pair.
 
-**CSI with Static Target**
+**CSI with Static target**
 
 ![statictargetCSI](https://res.cloudinary.com/emazecom/image/fetch/c_limit,a_ignore,w_440,h_280/https%3A%2F%2Fuserscontent2.emaze.com%2Fimages%2F694313c7-4a1b-4238-afea-b3d7418ecc2d%2F72fd1edee58e624798969bd18a8a63c9.jpg)
 
-**CSI with moving Target**
+**What happens to CSI when target moves?**
 
 ![movingtargetCSI](https://cdn.pbrd.co/images/HWx61Qt.png)
 
