@@ -2,7 +2,7 @@
 
 ![Intro](https://cdn.pbrd.co/images/HWwQCzh.png)
 
-by Abdullah Aleem, Abuzar Ahmed and Saad Chugtai.
+by Abdullah Aleem, Abuzar Ahmed and Saad Chugtai. </br>
 Lahore Univeristy of Management Sciences (Senior year thesis)
 
 ---
